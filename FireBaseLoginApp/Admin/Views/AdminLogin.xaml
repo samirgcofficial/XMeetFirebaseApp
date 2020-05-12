@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  Title="Admin Login"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireBaseLoginApp.Admin.Views.AdminLogin">
+    <ContentPage.Content>
+            <StackLayout Margin="30,0" Orientation="Vertical" Spacing="30" VerticalOptions="StartAndExpand">
+            <Image Source="firebaseimg.png" VerticalOptions="CenterAndExpand"/>
+            <Entry Placeholder="Enter User Name" Text="{Binding UserName}"/>
+             <Entry IsPassword="True" Placeholder="Enter User Password" Text="{Binding Password}"/>
+            <Button Text="Admin Login" Command="{Binding LoginAdmin}" BackgroundColor="Black" TextColor="White"/>
+            <Button Margin="0,50,0,0"  Clicked="Button_Clicked" Text="Register new Admin" TextColor="White" BackgroundColor="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

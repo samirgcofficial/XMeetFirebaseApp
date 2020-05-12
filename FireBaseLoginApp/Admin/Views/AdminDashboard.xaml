@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" Title="Admin Dash Board"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireBaseLoginApp.Admin.Views.AdminDashboard">
+    <ContentPage.Content>
+        <ListView x:Name="MyList" Footer="" HasUnevenRows="True" ItemSelected="MyList_ItemSelected">
+           <ListView.ItemTemplate>
+               <DataTemplate>
+                   <ViewCell>
+                         <Grid Margin="0,20">
+                           <Grid.ColumnDefinitions>
+                               <ColumnDefinition Width="3*"/>
+                               <ColumnDefinition Width="7*"/>
+                           </Grid.ColumnDefinitions>
+                           <StackLayout>
+                            <Frame CornerRadius="40" BorderColor="LightGray" HeightRequest="80" WidthRequest="80" HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
+                             <Image Source="noUser.jpg" Aspect="AspectFill"  HorizontalOptions="Center" VerticalOptions="Center" />
+                            </Frame>
+                           </StackLayout>
+                           <StackLayout Grid.Column="1" Margin="20" Orientation="Horizontal">
+                              <Label Text="{Binding UserName}"  VerticalOptions="CenterAndExpand"/>
+                              <Button Clicked="Button_Clicked"  TextColor="White" VerticalOptions="CenterAndExpand" Text="Assign Task" BackgroundColor="Black" HorizontalOptions="EndAndExpand" Padding="30,0"/>
+                       </StackLayout>
+                       </Grid>                 
+                   </ViewCell>
+               </DataTemplate>
+           </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

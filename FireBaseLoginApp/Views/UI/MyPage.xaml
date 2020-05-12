@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FireBaseLoginApp.Views.UI.MyPage">
+  <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label Margin="10,0" Text="Cards" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="0"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid RowSpacing="0" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image BackgroundColor="Green" Source="firebaseimg.png" Grid.Row="0"  HeightRequest="80" WidthRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Debit Card" Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" FontSize="12"/>
+                    </Grid>
+                      <Grid  RowSpacing="0"  Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image BackgroundColor="Green" Source="firebaseimg.png" Grid.Row="0"  HeightRequest="80" WidthRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Credit Card" Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" FontSize="12"/>
+                    </Grid>
+                </Grid>
+
+
+                <BoxView BackgroundColor="LightGray" HeightRequest="1" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Margin="10,0" Text="Bank accounts" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="3"/>
+                 <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid RowSpacing="0" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image BackgroundColor="Green" Source="firebaseimg.png" Grid.Row="0"  HeightRequest="80" WidthRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Bank accounts" Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" FontSize="12"/>
+                    </Grid>
+
+                      <Grid  RowSpacing="0"  Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image BackgroundColor="Green" Source="firebaseimg.png" Grid.Row="0"  HeightRequest="80" WidthRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Net banking" Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" FontSize="12"/>
+                    </Grid>
+                </Grid>
+                <BoxView BackgroundColor="LightGray" HeightRequest="1" Grid.Row="5" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Margin="10,0" Text="Wallets" Grid.Row="6" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" FontSize="14" TextColor="Black" FontAttributes="Bold"/>
+
+                <Grid Grid.Row="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid RowSpacing="0" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image BackgroundColor="Green" Source="firebaseimg.png" Grid.Row="0"  HeightRequest="80" WidthRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Paytm" Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" FontSize="12"/>
+                    </Grid>
+
+                      <Grid  RowSpacing="0"  Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image BackgroundColor="Green" Source="firebaseimg.png" Grid.Row="0"  HeightRequest="80" WidthRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Phone pe" Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" FontSize="12"/>
+                    </Grid>
+                     <Grid  RowSpacing="0"  Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image BackgroundColor="Green" Source="firebaseimg.png" Grid.Row="0"  HeightRequest="80" WidthRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Phone pe" Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" FontSize="12"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+    </ContentPage>
