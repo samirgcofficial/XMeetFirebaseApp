@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FireBaseLoginApp.Views.Login.LoginPage">
     <NavigationPage.TitleView>
-        <Button FontSize="18" Text="Admin Access" HorizontalOptions="EndAndExpand" Clicked="Button_Clicked" BackgroundColor="Transparent" TextColor="Black"/>
+        <Button FontSize="18" Text="Admin Access" TextColor="White" HorizontalOptions="EndAndExpand" Clicked="Button_Clicked" BackgroundColor="Transparent"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Margin="30,0" Orientation="Vertical" Spacing="30" VerticalOptions="StartAndExpand">

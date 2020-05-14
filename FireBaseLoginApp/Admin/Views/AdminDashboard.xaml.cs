@@ -76,7 +76,6 @@ namespace FireBaseLoginApp.Admin.Views
         {
             if (e.SelectedItem == null)
                 return;
-
             var content = e.SelectedItem as RegisterTable;
             await Navigation.PushAsync(new AdminDashboardDetails(content));
             MyList.SelectedItem = null;

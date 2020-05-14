@@ -1,10 +1,91 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Add Task"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="FireBaseLoginApp.Admin.Views.AdminDashboardDetails">
     <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" /> 
+            </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout>
+               <Image HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" HeightRequest="100"  IsAnimationPlaying="True"
+                   Scale="2"
+                    Source="Tasks.gif"
+                    VerticalOptions="Start"/>
+            </StackLayout>
+            <yummy:PancakeView BorderThickness="1" BorderColor="LightGray"
+            Padding="30,20,30,30" BackgroundColor="White"
+            CornerRadius="40,40,0,0"
+            VerticalOptions="FillAndExpand">
+              <Grid>
+                  <Grid.RowDefinitions>
+                       <RowDefinition Height="Auto"/>
+                       <RowDefinition Height="Auto"/>
+                       <RowDefinition Height="Auto"/>
+                       <RowDefinition Height="Auto"/>
+                       <RowDefinition Height="Auto"/>
+                  </Grid.RowDefinitions>
 
+                  <!--XamarinForms 4.6 Features Expander-->
+            <StackLayout x:Name="MyStack"  Grid.Row="3"
+                BindableLayout.ItemsSource="{Binding clientTasks}"
+                Padding="0, 6, 0, 0">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Expander>
+                            <Expander.Header>
 
-
-    </ContentPage.Content>
+                                 <yummy:PancakeView Margin="5" Padding="5" BorderThickness="1" CornerRadius="18" BorderColor="LightGray" BackgroundColor="White">
+                                     <StackLayout Orientation="Horizontal">
+                                    <Label FontSize="20" HorizontalOptions="StartAndExpand" TextColor="Black">
+                                       <Label.FormattedText>
+                                          <FormattedString>
+                                              <Span TextColor="{StaticResource Key=ThemeColor}"   Text=" 🌲 "/>
+                                               <Span Text="{Binding TaskTitle}"/>
+                                          </FormattedString>
+                                      </Label.FormattedText>
+                                     </Label>
+                                     <Label Text=" 🗑️  " HorizontalOptions="EndAndExpand">
+                                         <Label.GestureRecognizers>
+                                             <TapGestureRecognizer Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference MyStack}}" CommandParameter="{Binding .}"/>
+                                         </Label.GestureRecognizers>
+                                     </Label>
+                                     </StackLayout>
+                                 </yummy:PancakeView>
+                            </Expander.Header>
+                           <StackLayout 
+                                    Grid.Column="1"
+                                    BindableLayout.ItemsSource="{Binding clientTasks}"
+                                    Spacing="0">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                                <Grid Margin="10,0,0,0" >
+                                                <Label FontSize="18" HorizontalOptions="StartAndExpand" >
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span TextColor="{StaticResource SubHeadingThemeColor}" Text="﹂  "></Span>
+                                                             <Span Text="{Binding TaskName}"></Span>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </Grid>
+                                        </DataTemplate>  
+                                     </BindableLayout.ItemTemplate>
+                               </StackLayout>
+                        </Expander>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+             </StackLayout>
+           <Button Grid.Row="4" Margin="30" VerticalOptions="EndAndExpand" BackgroundColor="#007fff" TextColor="White" Command="{Binding UpdateDatabaseCommand}" Text="Update Database"/>
+              </Grid>
+           </yummy:PancakeView>
+        </StackLayout>
+    </ScrollView>
+      
+     </Grid>
+     </ContentPage.Content>
 </ContentPage>

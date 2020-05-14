@@ -6,11 +6,10 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                  <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <forms:ChartView x:Name="FakeChart" HeightRequest="150"/>
-
            <ListView Grid.Row="1" ItemSelected="MyList_ItemSelected" SeparatorVisibility="None" Margin="20,20" x:Name="MyList" Footer="" HasUnevenRows="True">
            <ListView.ItemTemplate>
                <DataTemplate>

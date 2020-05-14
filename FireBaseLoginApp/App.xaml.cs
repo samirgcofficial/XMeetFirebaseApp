@@ -12,7 +12,9 @@ namespace FireBaseLoginApp
         public App()
         {
             InitializeComponent();
-
+            Device.SetFlags(new[] {
+                "Expander_Experimental"
+            });
             MainPage = new NavigationPage(new LoginPage());
         }
 

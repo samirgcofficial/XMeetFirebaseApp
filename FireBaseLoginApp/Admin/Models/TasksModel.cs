@@ -15,7 +15,6 @@ namespace FireBaseLoginApp.Admin.Models
     public class ClientTask
     {
         public string TaskName { get; set; }
-
     }
 
 }

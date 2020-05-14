@@ -56,6 +56,9 @@ namespace FireBaseLoginApp.Serivces
 
             }
         }
+
+        
+
         //Login with clients credentials. 
         public async Task<RegisterTable> LoginUser(string username, string password)
         {
@@ -130,6 +133,27 @@ namespace FireBaseLoginApp.Serivces
                 TaskTitle = tasks.TaskTitle,
                 clientTasks = tasks.clientTasks
             });
+        }
+
+
+        //Update the database
+        public async Task<bool> DeleteDatabaseConetent(TasksModel tasksModel)
+        {
+            var DeleteUserDb = (await firebase
+             .Child("ClientTaskTable")
+             .OnceAsync<TasksModel>()).Where(a => a.Object.ClientID == tasksModel.ClientID).FirstOrDefault();
+            await firebase.Child("ClientTaskTable").Child(DeleteUserDb.Key).DeleteAsync();
+
+
+            if (DeleteUserDb.Object != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
         }
 
 

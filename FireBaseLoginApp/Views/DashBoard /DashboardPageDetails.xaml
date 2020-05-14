@@ -44,7 +44,7 @@
                              <Image  Source="ToDoIcon.png"  HeightRequest="20" WidthRequest="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
                             </Frame>
                            </StackLayout>
-                         <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="1" Margin="20" Orientation="Horizontal">
+                            <StackLayout VerticalOptions="CenterAndExpand" Grid.Column="1" Margin="20" Orientation="Horizontal">
                              <Label HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="{Binding TaskName}"/>
                           </StackLayout>
                           </Grid>
