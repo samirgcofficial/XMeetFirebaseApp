@@ -7,7 +7,7 @@
             <Label Text="Register User" FontSize="24" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
         <Entry Placeholder="UserName" Text="{Binding UserName}"></Entry>
         <Entry Placeholder="Password" Text="{Binding Password}"></Entry>
-        <Button Text="Register a new User" BackgroundColor="Black" TextColor="White" Command="{Binding RegisterUser}"/>
+        <Button CornerRadius="20" Text="Register a new User" BackgroundColor="Black" TextColor="White" Command="{Binding RegisterUser}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

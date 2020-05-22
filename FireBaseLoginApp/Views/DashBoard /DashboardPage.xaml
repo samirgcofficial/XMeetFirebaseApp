@@ -20,7 +20,7 @@
                                <ColumnDefinition Width="7*"/>
                            </Grid.ColumnDefinitions>
                            <StackLayout>
-                            <Frame CornerRadius="40" BorderColor="LightGray" HeightRequest="80" WidthRequest="80" HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
+                            <Frame HasShadow="False" CornerRadius="40" BorderColor="LightGray" HeightRequest="80" WidthRequest="80" HorizontalOptions="Center" Padding="0" IsClippedToBounds="True">
                              <Image Source="taskplanning.png"  HeightRequest="50" WidthRequest="50" HorizontalOptions="Center" VerticalOptions="Center" />
                             </Frame>
                            </StackLayout>

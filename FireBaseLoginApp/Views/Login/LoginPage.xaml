@@ -6,12 +6,14 @@
         <Button FontSize="18" Text="Admin Access" TextColor="White" HorizontalOptions="EndAndExpand" Clicked="Button_Clicked" BackgroundColor="Transparent"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout Margin="30,0" Orientation="Vertical" Spacing="30" VerticalOptions="StartAndExpand">
-            <Image Source="firebaseimg.png" VerticalOptions="CenterAndExpand"/>
+        <ScrollView>
+        <StackLayout  Margin="30,10" Orientation="Vertical" Spacing="30" VerticalOptions="StartAndExpand">
+            <Image Source="firebaseimg.png" HeightRequest="150" WidthRequest="150" VerticalOptions="CenterAndExpand"/>
             <Entry Placeholder="Enter User Name" Text="{Binding UserName}"/>
              <Entry IsPassword="True" Placeholder="Enter User Password" Text="{Binding Password}"/>
-            <Button Text="Login User" Command="{Binding LoginUser}" BackgroundColor="Black" TextColor="White"/>
-            <Button Margin="0,50,0,0" Command="{Binding GoToRegistration}" Text="Register User" TextColor="White" BackgroundColor="Black"/>
-        </StackLayout>
+            <Button CornerRadius="20" Text="Login User" Command="{Binding LoginUser}" BackgroundColor="Black" TextColor="White"/>
+            <Button CornerRadius="20" Margin="0,50,0,0" Command="{Binding GoToRegistration}" Text="Register User" TextColor="White" BackgroundColor="Black"/>
+        </StackLayout>  
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

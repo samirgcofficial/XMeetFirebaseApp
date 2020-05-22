@@ -1,7 +1,6 @@
 ﻿using System;
 using FireBaseLoginApp.Admin.Views;
 using FireBaseLoginApp.Views.Login;
-using FireBaseLoginApp.Views.UI;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

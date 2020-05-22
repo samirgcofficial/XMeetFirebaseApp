@@ -6,7 +6,7 @@
             <Label Text="Register User" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
         <Entry x:Name="USName" Placeholder="UserName" Text="{Binding UserName}"></Entry>
         <Entry x:Name="LNName" Placeholder="Password" Text="{Binding Password}"></Entry>
-            <Button Text="Register" BackgroundColor="Black" TextColor="White" Clicked="Button_Clicked"/>
+            <Button CornerRadius="20" Text="Register" BackgroundColor="Black" TextColor="White" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -41,6 +41,7 @@ namespace FireBaseLoginApp.ViewModels.Register
         private async Task SetRegisterUser()
         {
             var response = await ApiServices.ServiceClientInstance.RegisterUser(UserName, Password);
+
             if (response == true)
             {
                 await App.Current.MainPage.DisplayAlert("Alert", "User Created Sucessfully", "Ok");

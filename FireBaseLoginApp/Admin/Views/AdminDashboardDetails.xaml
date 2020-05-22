@@ -27,7 +27,6 @@
                        <RowDefinition Height="Auto"/>
                        <RowDefinition Height="Auto"/>
                        <RowDefinition Height="Auto"/>
-                       <RowDefinition Height="Auto"/>
                   </Grid.RowDefinitions>
 
                   <!--XamarinForms 4.6 Features Expander-->
@@ -80,7 +79,7 @@
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
              </StackLayout>
-           <Button Grid.Row="4" Margin="30" VerticalOptions="EndAndExpand" BackgroundColor="#007fff" TextColor="White" Command="{Binding UpdateDatabaseCommand}" Text="Update Database"/>
+
               </Grid>
            </yummy:PancakeView>
         </StackLayout>

@@ -32,7 +32,7 @@ namespace FireBaseLoginApp.Serivces
         FirebaseClient firebase;
         public ApiServices()
         {
-          firebase = new FirebaseClient("https://testapp-d20dd.firebaseio.com/");
+          firebase = new FirebaseClient("https://test2-9c1ce.firebaseio.com/");
         }
 
 
@@ -43,7 +43,7 @@ namespace FireBaseLoginApp.Serivces
         public async Task<bool> RegisterUser(string username, string password)
         {
          var result =    await firebase
-             .Child("RegisterClientTable")
+             .Child("RegisterEmployeeTable")
              .PostAsync(new RegisterTable() { UserId  = Guid.NewGuid(), UserName = username,Password= password });
 
             if(result.Object!=null)
@@ -57,13 +57,12 @@ namespace FireBaseLoginApp.Serivces
             }
         }
 
-        
-
+   
         //Login with clients credentials. 
         public async Task<RegisterTable> LoginUser(string username, string password)
         {
             var GetPerson = (await firebase
-              .Child("RegisterClientTable")
+              .Child("RegisterEmployeeTable")
               .OnceAsync<RegisterTable>()).Where(a => a.Object.UserName == username).Where(b=>b.Object.Password == password).FirstOrDefault();
 
             if (GetPerson != null)
@@ -82,7 +81,7 @@ namespace FireBaseLoginApp.Serivces
         public async Task<List<TasksModel>> GetClientTasks(string userId)
         {
             var GetTasks = (await firebase
-              .Child("ClientTaskTable")
+              .Child("EmployeeTaskTable")
               .OnceAsync<TasksModel>()).Where(a => a.Object.ClientID.ToString() == userId).Select(item => new TasksModel
               {
                   ClientID = item.Object.ClientID,
@@ -110,7 +109,7 @@ namespace FireBaseLoginApp.Serivces
         public async Task<List<RegisterTable>> GetRegisteredUsers()
         {
             var GetClients = (await firebase
-               .Child("RegisterClientTable")
+               .Child("RegisterEmployeeTable")
                .OnceAsync<RegisterTable>()).Select(item => new RegisterTable
                {
                    UserName = item.Object.UserName,
@@ -125,7 +124,7 @@ namespace FireBaseLoginApp.Serivces
         public async Task AssignTaskToClient(TasksModel tasks)
         {
             var result = await firebase
-            .Child("ClientTaskTable")
+            .Child("EmployeeTaskTable")
             .PostAsync(new TasksModel()
             {
                 ClientID = tasks.ClientID,
@@ -140,9 +139,9 @@ namespace FireBaseLoginApp.Serivces
         public async Task<bool> DeleteDatabaseConetent(TasksModel tasksModel)
         {
             var DeleteUserDb = (await firebase
-             .Child("ClientTaskTable")
+             .Child("EmployeeTaskTable")
              .OnceAsync<TasksModel>()).Where(a => a.Object.ClientID == tasksModel.ClientID).FirstOrDefault();
-            await firebase.Child("ClientTaskTable").Child(DeleteUserDb.Key).DeleteAsync();
+            await firebase.Child("EmployeeTaskTable").Child(DeleteUserDb.Key).DeleteAsync();
 
 
             if (DeleteUserDb.Object != null)

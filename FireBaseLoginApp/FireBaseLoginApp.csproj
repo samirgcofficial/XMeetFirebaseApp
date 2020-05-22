@@ -35,7 +35,6 @@
     <Folder Include="ViewModels\DashBoard\" />
     <Folder Include="Tables\" />
     <Folder Include="Tables\Register\" />
-    <Folder Include="Views\UI\" />
     <Folder Include="Admin\" />
     <Folder Include="Admin\Models\" />
     <Folder Include="Admin\Views\" />

@@ -3,6 +3,9 @@
     <Application.Resources>
         <Color x:Key="ThemeColor">#007fff</Color>
          <Color x:Key="SubHeadingThemeColor">#e3ebf7</Color>
-   
+      <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="Black"/>
+        <Setter Property="BarTextColor" Value="White"/>
+      </Style>
     </Application.Resources>
 </Application>

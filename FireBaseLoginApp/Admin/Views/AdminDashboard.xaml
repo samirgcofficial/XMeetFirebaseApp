@@ -19,7 +19,7 @@
                            </StackLayout>
                            <StackLayout Grid.Column="1" Margin="20" Orientation="Horizontal">
                               <Label Text="{Binding UserName}"  VerticalOptions="CenterAndExpand"/>
-                              <Button Clicked="Button_Clicked"  TextColor="White" VerticalOptions="CenterAndExpand" Text="Assign Task" BackgroundColor="Black" HorizontalOptions="EndAndExpand" Padding="30,0"/>
+                              <Button CornerRadius="20" Clicked="Button_Clicked"  TextColor="White" VerticalOptions="CenterAndExpand" Text="Assign Task" BackgroundColor="Black" HorizontalOptions="EndAndExpand" Padding="30,0"/>
                        </StackLayout>
                        </Grid>                 
                    </ViewCell>

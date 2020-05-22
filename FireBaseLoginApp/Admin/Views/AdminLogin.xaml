@@ -7,8 +7,8 @@
             <Image Source="firebaseimg.png" VerticalOptions="CenterAndExpand"/>
             <Entry Placeholder="Enter User Name" Text="{Binding UserName}"/>
              <Entry IsPassword="True" Placeholder="Enter User Password" Text="{Binding Password}"/>
-            <Button Text="Admin Login" Command="{Binding LoginAdmin}" BackgroundColor="Black" TextColor="White"/>
-            <Button Margin="0,50,0,0"  Clicked="Button_Clicked" Text="Register new Admin" TextColor="White" BackgroundColor="Black"/>
+            <Button CornerRadius="20" Text="Admin Login" Command="{Binding LoginAdmin}" BackgroundColor="Black" TextColor="White"/>
+            <Button CornerRadius="20" Margin="0,50,0,0"  Clicked="Button_Clicked" Text="Register new Admin" TextColor="White" BackgroundColor="Black"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
