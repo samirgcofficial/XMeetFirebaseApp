@@ -1,6 +1,7 @@
 # XMeetFirebaseApp
 Xhackers May'2020 UG Meet
 
+Presentation Slide : https://www.slideshare.net/SamirGC1/xhacker-firebase
 
 Employee + Admin App [Show Case] + Xamarin Forms 4.6 Expanders Integration and Implementation with Nested Tables. 
 
