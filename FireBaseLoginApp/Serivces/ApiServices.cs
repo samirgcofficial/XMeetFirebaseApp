@@ -32,7 +32,9 @@ namespace FireBaseLoginApp.Serivces
         FirebaseClient firebase;
         public ApiServices()
         {
-          firebase = new FirebaseClient("https://test2-9c1ce.firebaseio.com/");
+
+
+          firebase = new FirebaseClient("https://xhackersdb.firebaseio.com/");
         }
 
 
@@ -140,7 +142,7 @@ namespace FireBaseLoginApp.Serivces
         {
             var DeleteUserDb = (await firebase
              .Child("EmployeeTaskTable")
-             .OnceAsync<TasksModel>()).Where(a => a.Object.ClientID == tasksModel.ClientID).FirstOrDefault();
+             .OnceAsync<TasksModel>()).Where(a => a.Object.TaskId == tasksModel.TaskId).FirstOrDefault();
             await firebase.Child("EmployeeTaskTable").Child(DeleteUserDb.Key).DeleteAsync();
 
 
