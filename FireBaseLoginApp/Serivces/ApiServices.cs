@@ -32,8 +32,7 @@ namespace FireBaseLoginApp.Serivces
         FirebaseClient firebase;
         public ApiServices()
         {
-
-
+            //replace this with your firebase realtimedatabase end point.
           firebase = new FirebaseClient("https://xhackersdb.firebaseio.com/");
         }
 
